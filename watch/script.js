@@ -37,13 +37,10 @@ const resetIntervals = () => {
     buffer = 0;
 }
 const computeCache = (limit) => {
-    if (cache >= limit) {
-        const target = parseInt(cache / limit);
-        cache -= target * limit;
-        return target;
-    } else {
-        return 0;
-    }
+    if (cache < limit) return 0;
+    const target = parseInt(cache / limit);
+    cache %= limit;
+    return target;
 }
 // render
 const updateBigWatch = (call) => {

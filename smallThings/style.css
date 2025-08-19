@@ -1,0 +1,58 @@
+/* main */
+:root {
+    --border: #595959;
+    --border-shadow: #97979770;
+}
+html {
+    font-size: 16px;
+    background: #1e1e1e;
+    color: #f1f1f1;
+    font-family: system-ui;
+}
+* {
+    box-sizing: border-box;
+}
+article {
+    width: 100%;
+    border: .25rem solid var(--border);
+    box-shadow: 0 1px 3px var(--border-shadow);
+    border-radius: 1rem;
+    padding: 1rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+article::before {
+    content: attr(data-title);
+    position: absolute;
+    background: var(--border);
+    padding: .5rem;
+    border-radius: .5rem;
+    top: 0; left: 0;
+}
+/* Slider album on flexbox */
+.slider {
+    display: flex;
+    gap: 2rem;
+}
+.slider .img {
+    flex: 1;
+    height: 500px;
+    border-radius: 1rem;
+    background-position: center;
+    transition: .25s ease-out;
+}
+.slider .img.active {
+    flex: 5;
+}
+/* LED board */
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+}
+.board > div {
+    width: 1rem;
+    height: 1rem;
+    background: #2d2d2d;
+    transition: .1s ease-out;
+}

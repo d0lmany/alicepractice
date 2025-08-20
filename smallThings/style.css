@@ -56,3 +56,16 @@ article::before {
     background: #2d2d2d;
     transition: .1s ease-out;
 }
+/* Separator */
+.separator {
+    display: flex;
+    align-items: center;
+}
+.separator::before, .separator::after {
+    flex: 1;
+    content: "";
+    background: var(--border);
+    height: .25rem;
+    margin-inline: 1rem;
+    border-radius: 1rem;
+}

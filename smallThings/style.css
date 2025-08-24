@@ -29,6 +29,10 @@ article::before {
     border-radius: .5rem;
     top: 0; left: 0;
 }
+article.center {
+    display: flex;
+    justify-content: center;
+}
 /* Slider album on flexbox */
 .slider {
     display: flex;
@@ -68,4 +72,63 @@ article::before {
     height: .25rem;
     margin-inline: 1rem;
     border-radius: 1rem;
+}
+/* step animation */
+.steps {
+    background-color: white;
+    width: 100px;
+    height: 125px;
+    background-image: url('./assets/img/ss.png');
+
+    animation: sprite-steps .75s steps(7, start) infinite;
+    --end-step: -674px;
+}
+@keyframes sprite-steps {
+    from {
+        background-position-x: 0;
+    }
+    to {
+        background-position-x: var(--end-step);
+    }
+}
+/* switch */
+/*.switch + label::before {
+    width: 3.5rem;
+    min-height: 2rem;
+    background: white;
+    content: "";
+    display: block;
+}*/
+.switch {
+    display: none;
+}
+.switch + label {
+    position: relative;
+}
+.switch + label::before {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 1.75rem;
+    background: gray;
+    border-radius: 1rem;
+    transition: ease-out .25s;
+}
+.switch:checked + label::before {
+    background: #19b819;
+}
+.switch + label::after {
+    content: "";
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: #ebebeb;
+    border-radius: 1rem;
+    position: absolute;
+    left: .25rem;
+    top: .25rem;
+    transition: ease-out .25s;
+}
+.switch:checked + label::after {
+    left: 1.5rem;
 }

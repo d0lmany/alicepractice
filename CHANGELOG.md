@@ -1,5 +1,8 @@
 # Changelog
 
+## 2025-08-24
+- Added "Step animation" into **Small Things**
+- Added "Switch" into **Small Things**
 ## 2025-08-20
 - Added "Separator" into **Small Things**
 - Added "LED board" into **Small Things**

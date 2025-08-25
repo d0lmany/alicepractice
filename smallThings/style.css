@@ -1,7 +1,7 @@
 /* main */
 :root {
-    --border: #595959;
-    --border-shadow: #97979770;
+    --border: #414141;
+    --border-shadow: #62626270;
 }
 html {
     font-size: 16px;
@@ -13,20 +13,21 @@ html {
     box-sizing: border-box;
 }
 article {
-    width: 100%;
+    width: 95%;
     border: .25rem solid var(--border);
     box-shadow: 0 1px 3px var(--border-shadow);
-    border-radius: 1rem;
+    border-radius: .5rem;
     padding: 1rem;
     position: relative;
     margin-bottom: 1rem;
+    margin-inline: auto;
 }
 article::before {
     content: attr(data-title);
     position: absolute;
     background: var(--border);
     padding: .5rem;
-    border-radius: .5rem;
+    border-radius: .25rem;
     top: 0; left: 0;
 }
 article.center {
@@ -92,13 +93,6 @@ article.center {
     }
 }
 /* switch */
-/*.switch + label::before {
-    width: 3.5rem;
-    min-height: 2rem;
-    background: white;
-    content: "";
-    display: block;
-}*/
 .switch {
     display: none;
 }
@@ -131,4 +125,22 @@ article.center {
 }
 .switch:checked + label::after {
     left: 1.5rem;
+}
+/* rgb board */
+.rgb-board #colorPlace {
+    width: 150px;
+    height: 125px;
+    box-shadow: inset 0 0 4px -1px;
+    border-radius: .5rem;
+}
+/* utils */
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.col {
+    flex-direction: column;
+}
+.gap {
+    gap: 1rem;
 }

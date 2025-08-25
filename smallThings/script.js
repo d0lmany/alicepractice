@@ -38,3 +38,14 @@ for (let i = 0; i < 1000; i++) {
     doc.append(item);
 }
 board.append(doc);
+// RGB gen
+const colorInputs = {
+    r: document.getElementById('r'),
+    g: document.getElementById('g'),
+    b: document.getElementById('b'),
+};
+Object.keys(colorInputs).forEach(key => {
+    colorInputs[key].addEventListener('input', () => {
+        document.getElementById('colorPlace').style.background = `rgb(${colorInputs.r.value}, ${colorInputs.g.value}, ${colorInputs.b.value})`;
+    })
+});

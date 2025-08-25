@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2025-08-24
+- Added "RGB gen" into **Small Things**
 - Added "Step animation" into **Small Things**
 - Added "Switch" into **Small Things**
 ## 2025-08-20

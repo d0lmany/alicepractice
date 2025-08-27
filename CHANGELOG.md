@@ -1,5 +1,7 @@
 # Changelog
 
+## 2025-08-27
+- Added "Palette" into **Small Things**
 ## 2025-08-24
 - Added "RGB gen" into **Small Things**
 - Added "Step animation" into **Small Things**
